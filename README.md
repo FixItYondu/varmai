@@ -1,2 +1,1 @@
-# varmai
-Varm AI Terminal Website
+# Varm AI Terminal Website

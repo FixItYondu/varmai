@@ -1,0 +1,268 @@
+body {
+  margin: 10px;
+  padding: 10px 10px;
+  background-color: #333;
+  color: white;
+  font-family: "Menlo";
+  font-size: 16px;
+}
+
+.App {
+  background-color: #333;
+  color: white;
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.terminal {
+  white-space: pre-line;
+}
+
+/* Base terminal styling */
+.terminal-body {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  font-family: "Menlo";
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  height: 92vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.topnote {
+  color: rgb(218, 213, 213);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50em;
+  animation: type 1s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  display: block;
+}
+
+pre {
+  /* white-space: nowrap; */
+  overflow: hidden;
+  width: 500em;
+  -webkit-animation: type2 15s steps(40, end);
+  animation: type2 15s steps(750, end);
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  display: block;
+}
+
+.help-text {
+  overflow: hidden;
+  width: 500em;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 10s steps(750, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/* Header section with logo */
+.header {
+  margin-bottom: 1.5em;
+  text-align: left;
+  color: #9F353D;
+}
+
+/* ASCII art container */
+.ascii-art {
+  white-space: pre;
+  font-family: monospace;
+  line-height: 1.2;
+  margin: 1.5em 0;
+}
+
+/* Color classes for different ASCII characters */
+.char-at {
+  color: #472e1a; /* Darkest brown */
+}
+
+.char-percent {
+  color: #7a262e; /* Medium brown/gold */
+}
+
+.char-hash {
+  color: #CE9E4B; /* Bright gold */
+}
+
+.char-asterisk {
+  color: #daa520; /* Golden rod */
+}
+
+.char-dot {
+  color: #bbad68; /* Light golden */
+}
+
+.char-colon {
+  color: #d6cb93; /* Cream */
+}
+
+.char-dash {
+  color: #d4d3a0; /* Medium gold */
+}
+
+.char-plus {
+  color: #cfb53b; /* Old gold */
+}
+
+.char-equals {
+  color: #22160C; /* Transitional gold */
+}
+
+/* Terminal input styling */
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.prefix {
+  color: #9F353D;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 13.3em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  color: #93cce7;
+  font-size: 1.2em;
+  font-family: "Menlo";
+  /* flex-grow: 1; */
+  outline: none;
+}
+
+.welcome1 {
+  color: #c5c491;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50em;
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.welcome2 {
+  color: #c5c491;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.command-line {
+  color: #9F353D;
+}
+
+.response-line {
+  color: #9F353D;
+}
+
+.help {
+  color: #93cce7; 
+  text-shadow: 0 0 5px #93cce7;
+}
+
+/* Animation for cursor */
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+#userInput {
+  caret-color: transparent;
+  background-color: transparent;
+  border: none;
+  color: #93cce7;
+  font-size: 1em;
+  font-family: "Menlo";
+  padding: 0;
+  margin: 0;
+  outline: none;
+  width: auto;
+  min-width: 0px;
+}
+
+.spanclass {
+  margin-left: 0px;
+  color: #000;
+  background: #93cce7;
+  animation: fade 1s infinite;
+  opacity: 0;
+  animation-delay: 4s;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    border: none;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    border: none;
+    opacity: 1;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
